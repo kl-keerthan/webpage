@@ -1,0 +1,44 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="login-form">
+        <h1>Login Form</h1>
+        <form id="loginForm" action="#" method="post">
+            <div>
+                <label class="lable" for="username">User Name</label>
+                <input type="text" name="user" id="username" placeholder="User Name" required>
+            </div>
+            <div>
+                <label class="lable" for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+            </div>
+            <button type="button" id="loginButton">Login</button>        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginButton = document.getElementById('loginButton');
+            
+            loginButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                
+                if (username === '' || password === '') {
+                    alert('Please fill in both username and password!');
+                } else {
+                    alert('Login successful!');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
